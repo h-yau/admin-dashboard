@@ -1,6 +1,7 @@
 # Admin Dashboard Project
 
 ![Dashboard Preview](dashboard-preview.png)
+
 [Live demo here!](https://nzxzn.github.io/admin-dashboard/)
 
 This project is part of The Odin Project curriculum and aims to create an admin dashboard using HTML, CSS, and JavaScript. The dashboard layout will utilize CSS Grid and Flexbox techniques to achieve a responsive and visually appealing design.
