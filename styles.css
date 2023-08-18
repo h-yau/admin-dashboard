@@ -11,7 +11,9 @@ body {
 }
 
 :root {
-    --top-container-size: 300px
+    --top-container-size: 300px;
+    --icon-height: 1.5rem;
+    --icon-gap: 1.5rem;
 }
 
 a {
@@ -70,8 +72,8 @@ a:hover {
 .nav-item {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    height: 1.5rem;
+    gap: var(--icon-gap);
+    height: var(--icon-height);
 
 }
 
@@ -88,4 +90,30 @@ a:hover {
 .top-container {
     display: grid;
     grid-template-rows: calc(var(--top-container-size) / 3) calc(var(--top-container-size) / 3 * 2);
+}
+
+.top-user {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 200px;
+
+    .search-form {
+        display: flex;
+        gap: var(--icon-gap);
+        padding-left: calc(var(--icon-gap) * 2);
+    }
+
+    .icon {
+        height: var(--icon-height);
+        gap: var(--icon-gap);
+    }
+
+    .search {
+        appearance: none;
+        flex: 1;
+        background-color: rgba(226,232, 240, 2);
+        border: none;
+        border-radius: 50px;
+        padding: 0 0.5rem;
+    }
 }

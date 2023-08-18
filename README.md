@@ -51,9 +51,10 @@ The goal of this project is to create an admin dashboard that allows users to ma
 
 ## Resources
 
-- Project Design: [Dashboard Design Example](link-to-design-file)
+- Project Design: [Dashboard Design Example](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard)
 - Color Palettes: [Tailwind Color Palettes](https://tailwindcss.com/docs/customizing-colors)
-- Icons: [Material Design Icons](https://material.io/resources/icons/)
+- Icons: [Material Design Icons](https://pictogrammers.com/library/mdi/)
+- User Icons: [Figma | Yan Liu](https://www.figma.com/community/file/996834837432309369)
 - Fonts: [Google Fonts](https://fonts.google.com/)
 
 ## Contribution
