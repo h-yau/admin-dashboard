@@ -1,6 +1,6 @@
 # Admin Dashboard Project
 
-![Dashboard Preview](dashboard-preview.png)
+![Dashboard Preview](demo.png)
 
 [Live demo here!](https://nzxzn.github.io/admin-dashboard/)
 

@@ -29,11 +29,14 @@ li {
     display: flex;
     align-items: center;
     gap: 2rem;
+    font-size: x-large;
 }
 
-.dashboard:hover {
+a:hover {
+    transition: scale 0.2s;
+    scale: 1.1;
 
-    .dashboard-icon {
+    .icon {
         transition: transform 1s;
         transform: rotate(360deg);
     }
@@ -41,21 +44,30 @@ li {
 
 .icon {
     height: inherit;
+    color: white;
 }
 
 
 .side-nav {
     background-color: rgba(25, 146, 212, 255);
+    font-weight: 700;
 }
 
 .side-nav a {
     color: white;
 }
 
+.sub-nav {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 .nav-item {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1.5rem;
     height: 1.5rem;
 
 }
