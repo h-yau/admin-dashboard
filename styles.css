@@ -10,6 +10,10 @@ body {
     padding: 0;
 }
 
+:root {
+    --top-container-size: 300px
+}
+
 a {
     text-decoration: none;
 }
@@ -44,7 +48,6 @@ a:hover {
 
 .icon {
     height: inherit;
-    color: white;
 }
 
 
@@ -61,7 +64,7 @@ a:hover {
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .nav-item {
@@ -72,12 +75,17 @@ a:hover {
 
 }
 
-.main-content {
+.main {
     border: 1px solid purple;
     display: grid;
-    grid-template-rows: 100px 200px 1fr;
+    grid-template-rows: var(--top-container-size) 1fr;
 }
 
-.main-content div {
+.main div {
     border: 1px solid purple;
+}
+
+.top-container {
+    display: grid;
+    grid-template-rows: calc(var(--top-container-size) / 3) calc(var(--top-container-size) / 3 * 2);
 }
