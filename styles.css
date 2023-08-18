@@ -10,6 +10,10 @@ body {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 li {
     list-style: none;
 }
@@ -27,18 +31,33 @@ li {
     gap: 2rem;
 }
 
-.dashboard-icon {
-    height: inherit;
-    transition: transform 1s;
+.dashboard:hover {
+
+    .dashboard-icon {
+        transition: transform 1s;
+        transform: rotate(360deg);
+    }
 }
 
-.dashboard-icon:hover {
-    transform: rotate(360deg);
+.icon {
+    height: inherit;
 }
 
 
 .side-nav {
-    background-color: rgb(4, 142, 235);
+    background-color: rgba(25, 146, 212, 255);
+}
+
+.side-nav a {
+    color: white;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 1.5rem;
+
 }
 
 .main-content {
