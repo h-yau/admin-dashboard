@@ -1,0 +1,52 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.window {
+    display: grid;
+    grid-template-columns: 20rem 1fr;
+}
+
+.dashboard {
+    margin: 1rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.dashboard-icon {
+    height: inherit;
+    transition: transform 1s;
+}
+
+.dashboard-icon:hover {
+    transform: rotate(360deg);
+}
+
+
+.side-nav {
+    background-color: rgb(4, 142, 235);
+}
+
+.main-content {
+    border: 1px solid purple;
+    display: grid;
+    grid-template-rows: 100px 200px 1fr;
+}
+
+.main-content div {
+    border: 1px solid purple;
+}
