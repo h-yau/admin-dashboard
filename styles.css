@@ -19,11 +19,13 @@ body {
 
 a {
     text-decoration: none;
+    color: black;
 }
 
-a:hover,
+.sub-nav a:hover,
 input.icon:hover,
 button:hover,
+.top-container a:hover,
 .project .icon:hover {
     transition: scale 0.1s;
     scale: 1.1;
@@ -88,7 +90,7 @@ li {
     align-items: center;
     gap: var(--icon-gap);
     height: var(--icon-height);
-
+    font-size: large;
 }
 
 .main {
@@ -161,7 +163,6 @@ li {
 .user-name {
     font-size: large;
     font-weight: 600;
-    color: black;
     padding: 0 var(--icon-gap);
 }
 
@@ -181,9 +182,7 @@ li {
     display: grid;
     justify-content: center;
     align-items: center;
-
     gap: 1rem;
-    color: black;
 }
 
 .name {
@@ -232,6 +231,10 @@ li {
     }
 }
 
+.projects {
+    grid-area: main;
+}
+
 .section-header {
     font-size: x-large;
     font-weight: 500;
@@ -245,12 +248,16 @@ li {
     gap: var(--icon-gap);
 }
 
+
 .project {
     background-color: white;
     box-shadow: var(--box-shadow-setting);
-    padding: 1.5rem;
+    padding: 1.5rem 1.5rem 0;
     height: 10rem;
     border-radius: 10px;
+    display: grid;
+    background-image: -webkit-linear-gradient(left, #f8b703, #f8b703 1.5%, transparent 1.5%, transparent 100%);
+
 
     .icon {
         margin: 0 var(--icon-gap) 0 0;
@@ -259,7 +266,7 @@ li {
 
 .project:hover {
     transition: scale 0.1s;
-    scale: 1.01;
+    scale: 1.02;
 }
 
 .header {
@@ -272,7 +279,11 @@ li {
     color: gray;
 }
 
+.project-icons {
+    justify-self: flex-end;
+}
+
 .side-bar {
     grid-area: side;
-
 }
+
