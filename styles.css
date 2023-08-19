@@ -11,9 +11,10 @@ body {
 }
 
 :root {
-    --top-container-size: 300px;
     --icon-height: 1.5rem;
     --icon-gap: 1.5rem;
+    --side-nav-color: rgba(25, 146, 212, 255);
+    --box-shadow-setting: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 a {
@@ -21,9 +22,11 @@ a {
 }
 
 a:hover,
-input.icon:hover {
+input.icon:hover,
+button:hover {
     transition: scale 0.1s;
     scale: 1.1;
+    cursor: pointer;
 }
 
 li {
@@ -32,7 +35,7 @@ li {
 
 .window {
     display: grid;
-    grid-template-columns: 20rem 1fr;
+    grid-template-columns: 19rem 1fr;
 }
 
 .dashboard {
@@ -60,7 +63,7 @@ li {
 
 
 .side-nav {
-    background-color: rgba(25, 146, 212, 255);
+    background-color: var(--side-nav-color);
     font-weight: 700;
 }
 
@@ -84,9 +87,8 @@ li {
 }
 
 .main {
-    border: 1px solid purple;
     display: grid;
-    grid-template-rows: var(--top-container-size) 1fr;
+    grid-template-rows: auto 1fr;
 }
 
 .main div {
@@ -95,7 +97,11 @@ li {
 
 .top-container {
     display: grid;
-    grid-template-rows: auto calc(var(--top-container-size) / 3 * 2);
+    grid-template-rows: auto auto;
+    gap: var(--icon-gap);
+    padding-bottom: var(--icon-gap);
+    box-shadow: var(--box-shadow-setting);
+    z-index: 10000;
 }
 
 .top-user {
@@ -106,7 +112,7 @@ li {
     .search-form {
         display: flex;
         gap: var(--icon-gap);
-        padding-left: calc(var(--icon-gap) * 2);
+        padding-left: calc(var(--icon-gap));
     }
 
     .icon {
@@ -117,6 +123,7 @@ li {
     .search {
         appearance: none;
         flex: 1;
+        max-width: 50rem;
         background-color: rgba(226,232, 240, 2);
         border: none;
         border-radius: 50px;
@@ -129,7 +136,7 @@ li {
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: var(--icon-gap);
-    padding: 0 calc(var(--icon-gap) * 2);
+    padding: 0 calc(var(--icon-gap));
 }
 
 .user {
@@ -149,11 +156,61 @@ li {
 .user-name {
     font-size: large;
     font-weight: 600;
+    color: black;
     padding: 0 var(--icon-gap);
 }
 
-.user:hover {
-    cursor: pointer;
-
+.user-greet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: large;
+    font-weight: 500;
+    padding: 0 2rem;
 }
 
+.big {
+    height: calc(var(--icon-height) * 4);
+}
+
+.intro {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+    color: black;
+}
+
+.name {
+    font-size: xx-large;
+    font-weight: 700;
+}
+
+.user-buttons {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: var(--icon-gap);
+
+    @media screen and (max-width: 950px){
+        grid-template-columns: auto;
+    }
+
+    .button {
+        background-color: var(--side-nav-color);
+        color: white;
+        border: none;
+        border-radius: 15px;
+        padding: 0.4rem 1.5rem;
+        font-size: large;
+    }
+}
+
+.main-content {
+    background-color: rgba(226,232, 240, 2);
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 20rem;
+}
