@@ -26,7 +26,7 @@ a {
 input.icon:hover,
 button:hover,
 .top-container a:hover,
-.project .icon:hover {
+.project .icon:hover{
     transition: scale 0.1s;
     scale: 1.1;
     cursor: pointer;
@@ -99,7 +99,7 @@ li {
 }
 
 .main div {
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
 }
 
 .top-container {
@@ -285,5 +285,27 @@ li {
 
 .side-bar {
     grid-area: side;
+}
+
+.section-card {
+    background-color: white;
+    box-shadow: var(--box-shadow-setting);
+    border-radius: 10px;
+    margin-bottom: var(--icon-gap);
+}
+
+.subsection {
+    padding: calc(var(--icon-gap));
+}
+
+.subsection:hover {
+    scale: 1.025;
+    transition: scale 0.1s;
+}
+
+
+.hr {
+    width: 85%;
+    border-color: rgb(255, 255, 255);
 }
 
