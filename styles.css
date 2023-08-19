@@ -23,7 +23,8 @@ a {
 
 a:hover,
 input.icon:hover,
-button:hover {
+button:hover,
+.project .icon:hover {
     transition: scale 0.1s;
     scale: 1.1;
     cursor: pointer;
@@ -35,7 +36,7 @@ li {
 
 .window {
     display: grid;
-    grid-template-columns: 19rem 1fr;
+    grid-template-columns: 20rem 1fr;
 }
 
 .dashboard {
@@ -43,8 +44,12 @@ li {
     height: 4rem;
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: var(--icon-gap);
     font-size: xx-large;
+}
+
+.dashboard .icon {
+    height: inherit;
 }
 
 .side-nav a:hover {
@@ -58,7 +63,7 @@ li {
 }
 
 .icon {
-    height: inherit;
+    height: var(--icon-height);
 }
 
 
@@ -97,7 +102,7 @@ li {
 
 .top-container {
     display: grid;
-    grid-template-rows: auto auto;
+    padding: 0 clamp(0.5rem, var(--icon-gap), var(--icon-gap));
     gap: var(--icon-gap);
     padding-bottom: var(--icon-gap);
     box-shadow: var(--box-shadow-setting);
@@ -166,7 +171,6 @@ li {
     justify-content: space-between;
     font-size: large;
     font-weight: 500;
-    padding: 0 2rem;
 }
 
 .big {
@@ -192,7 +196,7 @@ li {
     grid-template-columns: auto auto auto;
     gap: var(--icon-gap);
 
-    @media screen and (max-width: 950px){
+    @media screen and (max-width: 1211px){
         grid-template-columns: auto;
     }
 
@@ -201,7 +205,8 @@ li {
         color: white;
         border: none;
         border-radius: 15px;
-        padding: 0.4rem 1.5rem;
+        width: 8rem;
+        padding: 0.5rem 0rem;
         font-size: large;
     }
 }
@@ -211,6 +216,63 @@ li {
 }
 
 .main-content {
+    padding: var(--icon-gap);
     display: grid;
-    grid-template-columns: 1fr 20rem;
+    gap: var(--icon-gap);
+    grid-template-areas: "main side";
+
+    @media screen and (min-width: 1212px) {
+        grid-template-columns: 1fr 20rem;
+    }
+
+    @media screen and (max-width: 1211px) {
+        grid-template-areas:
+        "main"
+        "side" ;
+    }
+}
+
+.section-header {
+    font-size: x-large;
+    font-weight: 500;
+    margin-bottom: 1ch;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 2fr));
+    gap: var(--icon-gap);
+}
+
+.project {
+    background-color: white;
+    box-shadow: var(--box-shadow-setting);
+    padding: 1.5rem;
+    height: 10rem;
+    border-radius: 10px;
+
+    .icon {
+        margin: 0 var(--icon-gap) 0 0;
+    }
+}
+
+.project:hover {
+    transition: scale 0.1s;
+    scale: 1.01;
+}
+
+.header {
+    font-size: large;
+    font-weight: 500;
+}
+
+.subtext {
+    font-size: 1rem;
+    color: gray;
+}
+
+.side-bar {
+    grid-area: side;
+
 }
