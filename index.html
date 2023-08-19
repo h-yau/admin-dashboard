@@ -21,37 +21,39 @@
                 <img src="./view-dashboard.svg" alt="Dashboard Icon" class="icon">
                 <span>Dashboard</span>
             </a>
-            <ul class="sub-nav">
-                <a href="#">
-                    <li class="nav-item"><img src="./Home.svg" alt="Home" class="icon">Home</li>
-                </a>
-                <a href="#">
-                    <li class="nav-item"><img src="./Profile.svg" alt="Profile" class="icon">Profile</li>
-                </a>
-                <a href="#">
-                    <li class="nav-item"><img src="./Messages.svg" alt="Messages" class="icon">Messages</li>
-                </a>
-                <a href="#">
-                    <li class="nav-item"><img src="./History.svg" alt="History" class="icon">History</li>
-                </a>
-                <a href="#">
-                    <li class="nav-item"><img src="Tasks.svg" alt="Tasks" class="icon">Tasks</li>
-                </a>
-                <a href="#">
-                    <li class="nav-item"><img src="Communities.svg" alt="Communities" class="icon">Communities</li>
-                </a>
-            </ul>
-            <ul class="sub-nav">
-                <a href="#">
-                    <li class="nav-item"><img src="Settings.svg" alt="Settings" class="icon">Settings</li>
-                </a>
-                <a href="#">
-                    <li class="nav-item"><img src="Support.svg" alt="Support" class="icon">Support</li>
-                </a>
-                <a href="#">
-                    <li class="nav-item"><img src="Privacy.svg" alt="Privacy" class="icon">Privacy</li>
-                </a>
-            </ul>
+            <div class="sticky">
+                <ul class="sub-nav">
+                    <a href="#">
+                        <li class="nav-item"><img src="./Home.svg" alt="Home" class="icon">Home</li>
+                    </a>
+                    <a href="#">
+                        <li class="nav-item"><img src="./Profile.svg" alt="Profile" class="icon">Profile</li>
+                    </a>
+                    <a href="#">
+                        <li class="nav-item"><img src="./Messages.svg" alt="Messages" class="icon">Messages</li>
+                    </a>
+                    <a href="#">
+                        <li class="nav-item"><img src="./History.svg" alt="History" class="icon">History</li>
+                    </a>
+                    <a href="#">
+                        <li class="nav-item"><img src="Tasks.svg" alt="Tasks" class="icon">Tasks</li>
+                    </a>
+                    <a href="#">
+                        <li class="nav-item"><img src="Communities.svg" alt="Communities" class="icon">Communities</li>
+                    </a>
+                </ul>
+                <ul class="sub-nav">
+                    <a href="#">
+                        <li class="nav-item"><img src="Settings.svg" alt="Settings" class="icon">Settings</li>
+                    </a>
+                    <a href="#">
+                        <li class="nav-item"><img src="Support.svg" alt="Support" class="icon">Support</li>
+                    </a>
+                    <a href="#">
+                        <li class="nav-item"><img src="Privacy.svg" alt="Privacy" class="icon">Privacy</li>
+                    </a>
+                </ul>
+            </div>
         </nav>
         <main class="main">
             <div class="top-container">
@@ -159,21 +161,21 @@
                     <div class="section">
                         <div class="section-header">Announcements</div>
                         <div class="section-card">
-                            <div class="subsection">
+                            <div class="subsection hover">
                                 <a href="#">
                                     <div class="header">Site Maintenance</div>
                                     <div class="subtext">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</div>
                                 </a>
                             </div>
                             <hr class="hr">
-                            <div class="subsection">
+                            <div class="subsection hover">
                                 <a href="#">
                                     <div class="header">Community Share Day</div>
                                     <div class="subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dapibus.</div>
                                 </a>
                             </div>
                             <hr class="hr">
-                            <div class="subsection">
+                            <div class="subsection hover">
                                 <a href="#">
                                     <div class="header">Updated Privacy Policy</div>
                                     <div class="subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper tortor sodales, dapibus nisl id, feugiat.</div>
@@ -183,8 +185,46 @@
                     </div>
                     <div class="section">
                         <div class="section-header">Trending</div>
-                        <div class="section-card"></div>
-                        
+                        <div class="section-card">
+                            <ul class="subsection">
+                                <li class="trending-users">
+                                    <a href="#" class="user-info">
+                                        <img src="./Penguin.jpg" alt="Penguin" class="user-icon">
+                                        <div>
+                                            <div class="header">@penguin</div>
+                                            <div class="subtext">World Peace Builder</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="trending-users">
+                                    <a href="#" class="user-info">
+                                        <img src="./Squirrel.svg" alt="Squirrel" class="user-icon">
+                                        <div>
+                                            <div class="header">@nzxzn</div>
+                                            <div class="subtext">Super Cool Project</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="trending-users">
+                                    <a href="#" class="user-info">
+                                        <img src="./Chococat.svg" alt="Chococat" class="user-icon">
+                                        <div>
+                                            <div class="header">@chococat</div>
+                                            <div class="subtext">Life Changing App</div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="trending-users">
+                                    <a href="#" class="user-info">
+                                        <img src="./Tiger.jpg" alt="Tiger" class="user-icon">
+                                        <div>
+                                            <div class="header">@tiger</div>
+                                            <div class="subtext">Always Hungry</div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

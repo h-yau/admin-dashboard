@@ -54,6 +54,11 @@ li {
     height: inherit;
 }
 
+.sticky {
+    position: sticky;
+    top: var(--icon-gap);
+}
+
 .side-nav a:hover {
     transition: scale 0.2s;
     scale: 1.1;
@@ -115,10 +120,10 @@ li {
     display: grid;
     align-items: center;
     grid-template-columns: 1fr auto;
+    gap: var(--icon-gap);
 
     .search-form {
         display: flex;
-        gap: var(--icon-gap);
         padding-left: calc(var(--icon-gap));
     }
 
@@ -143,7 +148,6 @@ li {
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: var(--icon-gap);
-    padding: 0 calc(var(--icon-gap));
 }
 
 .user {
@@ -155,6 +159,7 @@ li {
 
 .user-icon {
     height: calc(var(--icon-height) * 2.5);
+    width: calc(var(--icon-height) * 2.5);
     object-fit: fill;
     border: 1px solid #EAEAEA;
     border-radius: 50%;
@@ -176,6 +181,7 @@ li {
 
 .big {
     height: calc(var(--icon-height) * 4);
+    width: calc(var(--icon-height) * 4);
 }
 
 .intro {
@@ -243,8 +249,7 @@ li {
 
 .project-cards {
     display: grid;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: repeat(auto-fill, minmax(30rem, 2fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: var(--icon-gap);
 }
 
@@ -253,7 +258,7 @@ li {
     background-color: white;
     box-shadow: var(--box-shadow-setting);
     padding: 1.5rem 1.5rem 0;
-    height: 10rem;
+    height: 12rem;
     border-radius: 10px;
     display: grid;
     background-image: -webkit-linear-gradient(left, #f8b703, #f8b703 1.5%, transparent 1.5%, transparent 100%);
@@ -298,14 +303,18 @@ li {
     padding: calc(var(--icon-gap));
 }
 
-.subsection:hover {
-    scale: 1.025;
-    transition: scale 0.1s;
-}
-
 
 .hr {
     width: 85%;
     border-color: rgb(255, 255, 255);
 }
 
+.trending-users {
+    margin: 2ch 0;
+}
+
+.hover:hover,
+.subsection a:hover {
+    scale: 1.025;
+    transition: scale 0.2s;
+}
